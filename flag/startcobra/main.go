@@ -2,7 +2,7 @@ package main
 
 import (
 	"os"
-	"playground/flag/startcobra/cmd"
+	"github.com/beautytiger/go-playground/flag/startcobra/cmd"
 )
 
 func main(){

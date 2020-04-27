@@ -1,6 +1,6 @@
 package service
 
-import "playground/gin/golang-gin-poc/entity"
+import "github.com/beautytiger/go-playground/gin/golang-gin-poc/entity"
 
 type VideoService interface {
 	Save(video entity.Video) entity.Video

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
-	"playground/flag/math/cmd"
+	"github.com/beautytiger/go-playground/flag/math/cmd"
 )
 
 func main(){

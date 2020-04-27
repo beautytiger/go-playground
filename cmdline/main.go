@@ -14,7 +14,7 @@
 
 package main
 
-import "playground/cmdline/cmd"
+import "github.com/beautytiger/go-playground/cmdline/cmd"
 
 func main() {
 	cmd.Execute()

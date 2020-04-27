@@ -4,8 +4,8 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
-	"playground/trybeego/hellobeego/models"
-	_ "playground/trybeego/hellobeego/routers"
+	"github.com/beautytiger/go-playground/trybeego/hellobeego/models"
+	_ "github.com/beautytiger/go-playground/trybeego/hellobeego/routers"
 )
 
 func insertUser() {

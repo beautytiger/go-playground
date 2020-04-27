@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"playground/trybeego/ihome/controllers"
+	"github.com/beautytiger/go-playground/trybeego/ihome/controllers"
 	"github.com/astaxie/beego"
 )
 

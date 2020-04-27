@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"playground/gin/golang-gin-poc/controller"
-	"playground/gin/golang-gin-poc/service"
+	"github.com/beautytiger/go-playground/gin/golang-gin-poc/controller"
+	"github.com/beautytiger/go-playground/gin/golang-gin-poc/service"
 )
 
 

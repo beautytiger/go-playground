@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "playground/trybeego/ihome/routers"
+	_ "github.com/beautytiger/go-playground/trybeego/ihome/routers"
 	"github.com/astaxie/beego"
 )
 

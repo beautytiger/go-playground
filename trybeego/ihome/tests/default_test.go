@@ -6,7 +6,7 @@ import (
 	"testing"
 	"runtime"
 	"path/filepath"
-	_ "playground/trybeego/ihome/routers"
+	_ "github.com/beautytiger/go-playground/trybeego/ihome/routers"
 
 	"github.com/astaxie/beego"
 	. "github.com/smartystreets/goconvey/convey"
