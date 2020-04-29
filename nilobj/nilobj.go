@@ -7,6 +7,8 @@ import (
 func main(){
 	var a map[string]string
 	var b []string
+	fmt.Println("nil map length",len(a))
+	fmt.Println("nil slice length", len(b))
 	m := new(map[string]string)
 	s := new([]string)
 	fmt.Println(m)
