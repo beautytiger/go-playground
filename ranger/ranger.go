@@ -240,14 +240,14 @@ func rangeMap() {
 	fmt.Printf("a=%v\nb=%v\nc=%v\nd=%v\ne=%v\n", a, b, c, d, e)
 	//map can only be compared to nil
 	//fmt.Println(`var d = map[int]int{} == var e = make(map[int]int)`, d == e)
-	fmt.Println("a==nil", a==nil)
-	fmt.Println("b==nil", b==nil)
+	fmt.Println("a==nil", a == nil)
+	fmt.Println("b==nil", b == nil)
 	//nil pointer deref
 	//fmt.Println("*b==nil", *b==nil)
-	fmt.Println("c==nil", c==nil)
-	fmt.Println("*c==nil", *c==nil)
-	fmt.Println("d==nil", d==nil)
-	fmt.Println("e==nil", e==nil)
+	fmt.Println("c==nil", c == nil)
+	fmt.Println("*c==nil", *c == nil)
+	fmt.Println("d==nil", d == nil)
+	fmt.Println("e==nil", e == nil)
 	// nil map can be ranged
 	for k, v := range a {
 		fmt.Println(k, v)
@@ -325,7 +325,7 @@ func chanUse() {
 	//res = <- *b
 	fmt.Println("get res", res)
 	go echo(num, c)
-	res = <- c
+	res = <-c
 	fmt.Println("get res", res)
 
 	//runtime error
@@ -339,7 +339,7 @@ func chanUse() {
 	//fmt.Println("get res", res)
 
 	fmt.Println("read from closed chan")
-	go func(c chan int){
+	go func(c chan int) {
 		fmt.Println("send value to chan")
 		c <- 657
 		fmt.Println("close chan")
@@ -349,13 +349,13 @@ func chanUse() {
 	fmt.Println("receive value from chan")
 	//https://stackoverflow.com/questions/16105325/how-to-check-a-channel-is-closed-or-not-without-reading-it
 	//the answer is no
-	v, ok := <- c
+	v, ok := <-c
 	fmt.Println("<-c", v, ok)
 	//closed chan will not block
 	//and ok will be false
-	v, ok = <- c
+	v, ok = <-c
 	fmt.Println("<-c", v, ok)
-	v, ok = <- c
+	v, ok = <-c
 	fmt.Println("<-c", v, ok)
 }
 
@@ -370,7 +370,7 @@ func chanRange() {
 	//Channel values can only be compared for equality.
 	//Two channel values are considered equal if they originated
 	//from the same make call (meaning they refer to the same channel value in memory).
-	fmt.Println(`make(chan int, 0) == make(chan int)`, a==b)
+	fmt.Println(`make(chan int, 0) == make(chan int)`, a == b)
 	go func(ch chan int) {
 		for i := 0; i < 10; i++ {
 			ch <- i
@@ -381,7 +381,7 @@ func chanRange() {
 	for k := range a {
 		fmt.Println("get value from ch:", k)
 	}
-	k, ok := <- a
+	k, ok := <-a
 	fmt.Println("final result from ch", k, ok)
 	//send to a closed chan will cause runtime panic
 	//fmt.Println("a <- 333")
@@ -426,6 +426,5 @@ func nilInterface() {
 	fmt.Println("a = false == nil", a == nil)
 	a = struct{}{}
 	fmt.Println("a = struct{}{} == nil", a == nil)
-
 
 }
