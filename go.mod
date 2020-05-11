@@ -13,7 +13,9 @@ require (
 	github.com/sirupsen/logrus v1.5.0
 	github.com/smartystreets/goconvey v1.6.4
 	github.com/spf13/cobra v1.0.0
+	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.6.3
+	github.com/stretchr/testify v1.4.0
 	github.com/urfave/cli v1.22.4
 	github.com/urfave/negroni v1.0.0
 	go.uber.org/zap v1.15.0
