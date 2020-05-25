@@ -8,6 +8,7 @@ require (
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/imdario/mergo v0.3.9 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
+	github.com/olivere/elastic/v7 v7.0.15
 	github.com/prometheus/client_golang v1.5.1
 	github.com/shiena/ansicolor v0.0.0-20151119151921-a422bbe96644 // indirect
 	github.com/sirupsen/logrus v1.5.0
@@ -15,7 +16,7 @@ require (
 	github.com/spf13/cobra v1.0.0
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.6.3
-	github.com/stretchr/testify v1.4.0
+	github.com/stretchr/testify v1.5.1
 	github.com/urfave/cli v1.22.4
 	github.com/urfave/negroni v1.0.0
 	go.uber.org/zap v1.15.0
