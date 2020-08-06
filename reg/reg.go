@@ -5,24 +5,13 @@ import (
 	"regexp"
 )
 
-var kubeVersionRegex = regexp.MustCompile("^v([\\d]+)(?:(alpha|beta)([\\d]+))?$")
-
-func main(){
-	//pattern := regexp.MustCompile("(?:my)")
-	//str := "myname.youname"
-	//result := pattern.FindAllString(str, 0)
-	//fmt.Printf("%#s", result)
-	//looptest()
-	v := "v2"
-	fmt.Println(kubeVersionRegex.FindStringSubmatch(v))
-	fmt.Println(int(""))
-}
-
-func looptest() {
-	lastPort := 10000
-	for offset := 1; offset < 100; offset++ {
-		port := lastPort + offset
-	//for port := lastPort + 1; port < 100; port++ {
-		fmt.Println(port)
-	}
+func main() {
+	var r1 = regexp.MustCompile(`(((\d+)-(\d+))-((\d+)-(\d+)))`)
+	var r2 = regexp.MustCompile(`(?:\d+)-(\d+)-(\d+)-(\d+)`)
+	var r3 = regexp.MustCompile(`(?P<first>\d+)-(\d+)-(\d+)-(\d+)`)
+	var s string = "abc1-2-3-4-5-6-7"
+	fmt.Println(r1.FindStringSubmatch(s))
+	fmt.Println(r2.FindStringSubmatch(s))
+	fmt.Println(r3.FindStringSubmatch(s))
+	fmt.Println(r3.SubexpNames()[5])
 }
